@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: order-app
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+      # 若日後改用 SpecificRecord，開啟：
+      # specific.avro.reader: true
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    # 可選：consumer 設定用於自測 consume
+    consumer:
+      group-id: order-app-g1
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+app:
+  topics:
+    orders: orders

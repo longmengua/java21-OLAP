@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "OrderCreated",
+  "namespace": "com.demo.events",
+  "fields": [
+    {"name": "orderId",  "type": "string"},
+    {"name": "userId",   "type": "long"},
+    {"name": "symbol",   "type": "string"},
+    {"name": "side",     "type": {"type":"enum","name":"Side","symbols":["BUY","SELL"]}},
+    {"name": "price",    "type": "string"},
+    {"name": "quantity", "type": "string"},
+    {"name": "ctime",    "type": "string"}  // ISO-8601 UTC
+  ]
+}

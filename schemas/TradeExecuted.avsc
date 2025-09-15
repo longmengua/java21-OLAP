@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TradeExecuted",
+  "namespace": "com.demo.events",
+  "fields": [
+    {"name": "tradeId",     "type": "string"},
+    {"name": "buyOrderId",  "type": "string"},
+    {"name": "sellOrderId", "type": "string"},
+    {"name": "buyUserId",   "type": "long"},
+    {"name": "sellUserId",  "type": "long"},
+    {"name": "symbol",      "type": "string"},
+    {"name": "price",       "type": "string"},
+    {"name": "quantity",    "type": "string"},
+    {"name": "amount",      "type": "string"},
+    {"name": "tradeTime",   "type": "string"},
+    {"name": "engineSeq",   "type": "long", "default": 0}
+  ]
+}
